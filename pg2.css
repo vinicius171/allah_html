@@ -1,0 +1,79 @@
+@keyframes moveText {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+.marquee {
+    position: fixed; /* Fixa o texto no topo da página */
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto se destacar */
+    /* Esconde o texto que passa do limite da div */
+}
+
+.marquee p {
+    position: absolute;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    animation: moveText 10s linear infinite; /* Aplica a animação */
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 800%;
+    
+}
+.rainbow-text {
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+body {
+    background-image: url('73783e50544c1b3ed9bff19ef557fd24.jpg'); /* Adiciona a imagem de fundo */
+    background-size: 100vh; /* Ajusta a imagem para cobrir todo o fundo */
+    background-color: #FFB3C7; /* Cor de fundo caso a imagem não carregue */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    display: flex; /* Utiliza display flex para alinhar os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2; /* Permite que a imagem do gato cresça e ocupe o espaço disponível */
+}
+
+.image-container img.round-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%; /* Torna a imagem redonda */
+}
+
+.gif {
+    flex-basis: 100px; /* Aumenta a largura base para os GIFs */
+    margin: 0 5px;
+}
+
+.gif img {
+    height: auto;
+    display: block;
+}
+
+.esquerda {
+    order: -1; /* Posiciona o GIF da esquerda antes da imagem do gato */
+}
+
+.direita {
+    order: 1; /* Posiciona o GIF da direita depois da imagem do gato */
+}
+
